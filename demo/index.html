@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>JQuery Portfolio - jQuery plugin for a slick and modern portfolio</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="portfolio.jquery.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('.thumbs').portfolio({
+                    cols: 4,
+                    transition: 'slideDown'
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <ul class="thumbs">
+            <li><a href="#travel" class="thumbnail" style="background-image: url('images/thumb.jpg')">
+                <h4>Travel Protection</h4><span class="description">Customized Group Websites</span></a>
+            </li>
+            <li>
+                <a href="#content1" class="thumbnail"><h4>Content1</h4><span class="description">Web-Enabled Travel Insurance Products</span></a>
+            </li>
+            <li>
+                <a href="#content2" class="thumbnail"><h4>Content2</h4><span class="description">Web-Enabled Travel Insurance Products</span></a>
+            </li>
+            <li>
+                <a href="#content3" class="thumbnail"><h4>Content3</h4><span class="description">Web-Enabled Travel Insurance Products</span></a>
+            </li>
+            <li>
+                <a href="#content4" class="thumbnail"><h4>Content4</h4><span class="description">Web-Enabled Travel Insurance Products</span></a>
+            </li>
+        </ul>
+
+        <div class="portfolio-content">
+            <div id="travel">
+                <div class="media"><img src="images/thumb.jpg"/></div>
+                <h3>Customized Group Websites</h3>
+                <p>Custom travel insurance websites designed for affinity groups. Offering travel insurance products and information relevant to travellers.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+
+            <div id="content1">
+                <div class="media"><img src="images/thumb.jpg"/></div>
+                <h3>In-House Illustrations1</h3>
+                <p>A mobile app that travels with you! Providing travellers with real-time alerts, access to 24/7 emergency assistance, and destination details that include travel health and security information</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+
+            <div id="content2">
+                <div class="media"><img src="images/thumb.jpg"/></div>
+                <h3>In-House Illustrations2</h3>
+                <p>A mobile app that travels with you! Providing travellers with real-time alerts, access to 24/7 emergency assistance, and destination details that include travel health and security information</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+
+            <div id="content3">
+                <div class="media"><img src="images/thumb.jpg"/></div>
+                <h3>In-House Illustrations3</h3>
+                <p>A mobile app that travels with you! Providing travellers with real-time alerts, access to 24/7 emergency assistance, and destination details that include travel health and security information</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+
+            <div id="content4">
+                <div class="media"><img src="images/thumb.jpg"/></div>
+                <h3>In-House Illustrations4</h3>
+                <p>A mobile app that travels with you! Providing travellers with real-time alerts, access to 24/7 emergency assistance, and destination details that include travel health and security information</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </body>
+</html>
