@@ -1,32 +1,14 @@
-ul.thumbs.tags li {
-	display: inline-block;
-}
-
-ul.thumbs.tags li a {
-    display: block;
-    margin-right: 15px;
-    margin-bottom: 10px;
-    padding: 8px 20px;
-    background-color: #fff;
-    color: $font-color-black;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    -webkit-transition: background-color 0.3s;
-    -moz-transition: background-color 0.3s;
-}
-
-ul.thumbs.tags li a:hover, .active {
-    background-color: #545871;
-    color: #fff;
+ul.thumbs {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
 ul.thumbs li {
     display: inline-block;
-    width: 31.26%;
     height: 200px;
     overflow: hidden;
     padding: 0;
-    margin: 1% 1.6% 1% 0;
     float: left;
     position: relative;
 }
@@ -35,9 +17,10 @@ ul.thumbs li a.thumbnail {
 	background-repeat: no-repeat;
 	background-size: cover;
     background-color: #cecece;
+    background-position-x: 50%;
 	display: block;
 	/*overflow: hidden;*/
-	border: 1px solid #ccc;
+    box-sizing: border-box;
 	transition: opacity 0.3s;
 	-webkit-transition: opacity 0.3s;
 	-moz-transition: opacity 0.3s;
@@ -52,28 +35,30 @@ ul.thumbs li a.thumbnail h4 {
     left: 0;
     padding: 7px 10px;
     text-transform: uppercase;
-    background-color: #545871;
-    color: #fff;
-    font-size: 12px;
+    background-color: #efefef;
+    color: #6b6b6b;
+    font-size: 14px;
     margin: 0;
 }
 
 ul.thumbs li a.thumbnail .description {
     padding: 0;
-    color: #fff;
     position: absolute;
-    /*bottom: -100px;*/
-    height: 0px;
+    height: 0;
     bottom: 0;
-    font-size: 14px;
     width: 100%;
     box-sizing: inherit;
-    padding: 10px 12px;
-    background-color: rgba(36, 41, 99, 0.8);
     opacity: 0;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
+    color: #333333;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    padding: 18px 12px;
+    line-height: 10px;
+    box-sizing: inherit;
+    text-align: center;
 }
 
 ul.thumbs li a.thumbnail .active-arrow {
@@ -92,37 +77,49 @@ ul.thumbs li a.thumbnail .active-arrow {
 
 @media (max-width: 970px)  {
 	ul.thumbs li {
-		width:46%;
+		width: 50% !important;
 	}
 	.media iframe{
 		width: 100%;
 	}
 }
 
+@media (max-width: 1200px) and (min-width: 970px) {
+    ul.thumbs li {
+        width: 33.3333% !important;
+    }
+}
+
 ul.thumbs li a.thumbnail:hover .description {
-	height: 40px;
+	height: 50px;
 	opacity: 1;
 }
 
 ul.thumbs li.content {
-	width: 100%;
+	width: 100% !important;
 	display: none;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	background: none;
 	float: left;
+    height: 250px;
 	position: relative;
 	padding: 45px 0 45px;
+}
+
+ul.thumbs li.content h3 {
+    display: inline-block;
 }
 
 ul.thumbs li.content .close {
     position: absolute;
     top: 0;
     right: 0;
-    opacity: 0.5;
-    width: 44px;
-    height: 42px;
+    color: #c2c2c2;
     cursor: pointer;
-    background: url('images/close.png') no-repeat;
+    font-weight: normal;
+    font-family: -webkit-pictograph;
+    font-size: 76px;
+    line-height: 70px;
 }
 
 ul.thumbs li.content .close:hover {

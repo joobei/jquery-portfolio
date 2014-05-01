@@ -13,8 +13,6 @@ if (typeof Object.create !== 'function') {
         init: function(options, elem) {
             var self = this;
 
-            // self.elem = elem;
-            self.$windowWidth = $(window).width();
             self.$elem = $(elem);
             self.$thumnail = $(elem).find('.thumbnail');
 
@@ -23,7 +21,6 @@ if (typeof Object.create !== 'function') {
 
             // Set columns width
             self.setColWidth();
-            $(window).resize(self.setColWidth());
 
             // On click
             self.$thumnail.click(function() {
@@ -33,8 +30,8 @@ if (typeof Object.create !== 'function') {
         setColWidth: function() {
             var self = this;
 
-            if (self.$windowWidth > 970) {
-                var colWidth = ((100 / self.options.cols) - 2); // - 2 because our margins are set to 1% in our css
+            if ($(window).width() > 970) {
+                var colWidth = ((100 / self.options.cols));
                 self.$elem.find('li').css('width', colWidth + '%');
             }
         },
@@ -52,8 +49,9 @@ if (typeof Object.create !== 'function') {
                     if (i !== (thumbnails.length - 1)) {
 
                         var cols = self.options.cols;
-                        if (self.$windowWidth <= 970 && self.$windowWidth > 590) cols = 2;
-                        else if (self.$windowWidth <= 590) cols = 1;
+                        if ($(window).width() <= 1200 && $(window).width() > 970) cols = 3;
+                        else if ($(window).width() <= 970 && $(window).width() > 590) cols = 2;
+                        else if ($(window).width() <= 590) cols = 1;
 
                         // thumb position
                         var thumbPos = i + 1;
@@ -89,14 +87,14 @@ if (typeof Object.create !== 'function') {
 
             // Add content
             var $portfolioContent = $($href);
-            var html = '<li class="content"><span class="close"></span>' + $portfolioContent.html() + '</li>';
+            var html = '<li class="content"><span class="close">&times;</span>' + $portfolioContent.html() + '</li>';
 
             self.$elem.find('li:eq(' + (contentPos - 1) + ')').after(html);
 
             // Animate
             self.$elem.find('li')[self.options.transition](500);
             $('html, body').animate({
-                scrollTop: $portfolioContent.offset().top -300
+                scrollTop: self.$elem.find('li.content').offset().top -150
             }, 700);
 
             // Close content
