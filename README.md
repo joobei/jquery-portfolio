@@ -1,10 +1,9 @@
 <h2>jQuery-Portfolio</h2>
 
-<p>This plugin helps you display and organize your portfolio pieces in a slick & <b>responsive</b> fashion. Easy to set up and get going.</p>
+<p>This plugin helps you display and organize your portfolio pieces in a slick & <b>responsive</b> fashion. Easy to set up and get going.</p> View the full demo <a href="http://arsenetoumani.github.io/jquery-portfolio/">here</a>
 
 I originally wrote this plugin when redesigning my <a href="http://www.arsenetoumani.com">portfolio</a> and later decided to make it available for all!<br/>
 Rebranding and updating our portfolios are no fun tasks for us devs, so I thought this plugin would facilitate the process.<br/>
-<b>Note:</b> I wrote this plugin in under an hour so it might be a little buggy. I'll try to patch them up with new features and such when I get some free time.
 
 <h2>Demo:</h2>
 
@@ -17,7 +16,7 @@ View the full demo <a href="http://arsenetoumani.github.io/jquery-portfolio/">he
 - Append and edit (to your liking) the HTML snippet you find in `/demo/index.html`
 - That's it! really, you just have to follow what's going on in the `/demo` folder ;)
 
-<h2>Options:</h3>
+<h2>Options:</h2>
 
 ```javascript
 $("#MyPortfolio").portfolio({
