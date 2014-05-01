@@ -8,7 +8,7 @@ Rebranding and updating our portfolios are no fun tasks for us devs, so I though
 
 <h2>Demo:</h2>
 
-View the full demo <a href="http://www.arsenetoumani.com">here</a>
+View the full demo <a href="http://arsenetoumani.github.io/jquery-portfolio/">here</a>
 
 <h2>Installation:</h2>
 
@@ -17,7 +17,7 @@ View the full demo <a href="http://www.arsenetoumani.com">here</a>
 - Append and edit (to your liking) the HTML snippet you find in `/demo/index.html`
 - That's it! really, you just have to follow what's going on in the `/demo` folder ;)
 
-<h3>Options:</h3>
+<h2>Options:</h3>
 
 ```javascript
 $("#MyPortfolio").portfolio({
