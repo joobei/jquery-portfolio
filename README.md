@@ -11,7 +11,7 @@ View the full demo <a href="http://arsenetoumani.github.io/jquery-portfolio/demo
 
 <h2>Installation:</h2>
 
-- Get both <i>portfolio.jquery.js</i> and <i>portfolio.jquery.css</i> files included in your html file
+- Get both `/dist/portfolio.jquery.min.js` and `/dist/portfolio.jquery.min.css` files included in your html file
 - Add `$("#MyPortfolio").portfolio({ options });` to your <i>script</i> tags or JS file
 - Append and edit (to your liking) the HTML snippet you find in `/demo/index.html`
 - That's it! really, you just have to follow what's going on in the `/demo` folder ;)
@@ -20,11 +20,11 @@ View the full demo <a href="http://arsenetoumani.github.io/jquery-portfolio/demo
 
 ```javascript
 $("#MyPortfolio").portfolio({
-    cols: 4 // Number of columns you want your thumbnails to take. This is 3 by default
-    transition: 'slideDown' // What jQuery transition effect you want. This is slideDown by default
+    cols: 3 // Number of columns you want your thumbnails to take. Default is 3
+    transition: 'slideDown' // What jQuery transition effect you want. Default is slideDown
 });
 ```
-For more options, just request in the issue tracker ;)
+For more options, just request in the issue tracker.
 
 <h2>Developers:</h2>
 
