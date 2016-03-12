@@ -2,9 +2,6 @@
 
 <p>This plugin helps you display and organize your portfolio pieces in a slick & <b>responsive</b> fashion. Easy to set up and get going. Check out the demo <a href="http://arsenetoumani.github.io/jquery-portfolio/demo/">here</a></p>
 
-I originally wrote this plugin when redesigning my <a href="http://www.arsenetoumani.com">portfolio</a> and later decided to make it available for all!<br/>
-Rebranding and updating our portfolios are no fun tasks for us devs, so I thought this plugin would facilitate the process.<br/>
-
 <h2>Demo:</h2>
 
 View the full demo <a href="http://arsenetoumani.github.io/jquery-portfolio/demo/">here</a>
