@@ -12,6 +12,7 @@ if (typeof Object.create !== 'function') {
     var Portfolio = {
         init: function(options, elem) {
             var self = this;
+            var openid ='';
 
             self.$elem = $(elem);
             self.$thumnail = $(elem).find('.thumbnail');
@@ -24,7 +25,19 @@ if (typeof Object.create !== 'function') {
 
             // On click
             self.$thumnail.click(function() {
-                self.showContent($(this));
+                if (self.openid === $(this).attr('href'))
+                {
+                    self.hideContent($(this));    
+                    self.openid ='';                
+                }
+                else
+                {
+                    self.hideContent($('href'));
+                    self.showContent($(this));                    
+                    self.openid = $(this).attr('href');
+                }
+                
+                
             });
         },
         setColWidth: function() {
@@ -73,6 +86,15 @@ if (typeof Object.create !== 'function') {
             }
 
             return contentPos;
+        },
+        hideContent: function(thumbnail) {
+            var $href = thumbnail.attr('href'),
+                self = this,
+                contentPos = self.getContentPos(thumbnail);
+
+            // Remove existing stuff first
+            self.$elem.find('li a.thumbnail .active-arrow').remove();
+            self.$elem.find('li.content').remove();
         },
         showContent: function(thumbnail) {
             var $href = thumbnail.attr('href'),
